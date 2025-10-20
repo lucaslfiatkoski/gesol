@@ -9,7 +9,7 @@ drizzle/
 .git
 
 # Build artifacts
-dist/
+# dist/ - Comentado porque precisamos do dist/public para o deploy
 
 # IDE files
 .vscode

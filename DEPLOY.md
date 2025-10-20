@@ -52,9 +52,18 @@ gesol-codigo-completo/
 
 ### 6. Troubleshooting
 
-Se o deploy mostrar código fonte em vez da aplicação:
+**Se o deploy mostrar código fonte em vez da aplicação:**
 - Verifique se o `vercel.json` está correto
-- Confirme que o comando `npm run build` funciona localmente
+- Confirme que o comando `pnpm build` funciona localmente
 - Verifique se a pasta `dist/public` é gerada corretamente
+
+**Se houver erro de lockfile do pnpm:**
+```bash
+pnpm install --no-frozen-lockfile
+```
+
+**Se aparecer warning sobre builds configuration:**
+- Isso é normal, as configurações do projeto sobrescrevem as do Vercel
+- O deploy funcionará normalmente
 
 O projeto está configurado para ser um **frontend estático** otimizado para o Vercel!
