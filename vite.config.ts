@@ -11,6 +11,15 @@ const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(
 
 export default defineConfig({
   plugins,
+  define: {
+    // Variáveis de ambiente definidas diretamente no Vite config
+    'import.meta.env.VITE_APP_LOGO': JSON.stringify('/logo.svg'),
+    'import.meta.env.VITE_APP_TITLE': JSON.stringify('Gesol Energia Solar'),
+    'import.meta.env.VITE_ANALYTICS_ENDPOINT': JSON.stringify('http://localhost:3000/analytics'),
+    'import.meta.env.VITE_ANALYTICS_WEBSITE_ID': JSON.stringify('12345'),
+    'import.meta.env.VITE_OAUTH_PORTAL_URL': JSON.stringify('http://localhost:3000'),
+    'import.meta.env.VITE_APP_ID': JSON.stringify('gesol-app-local-id'),
+  },
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
